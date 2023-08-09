@@ -14,11 +14,21 @@ dados_abertos_api = 'https://dadosabertos.capes.gov.br/api/3/action'
 @functools.lru_cache(maxsize=128)
 def get_all_datasets_with_resources(
     q: str = 'catalogo-de-teses-e-dissertacoes',
+    rows: int = 10,
 ) -> pd.DataFrame:
+    """Obtém todos os conjuntos de dados com recursos.
+
+    Args:
+        q (str, optional): grupo de conjuntos de dados. Defaults to 'catalogo-de-teses-e-dissertacoes'.
+        rows (int, optional): quantidade de registros. Defaults to 10.
+
+    Returns:
+        pd.DataFrame: retorna um DataFrame com os conjuntos de dados
+    """
 
     # Obter todos os conjuntos de dados com recursos
     response = requests.get(
-        f'{dados_abertos_api}/package_search', params={'q': q}
+        f'{dados_abertos_api}/package_search', params={'q': q, 'rows': rows}
     )
     r_json = response.json()
     datasets = r_json['result']['results']
