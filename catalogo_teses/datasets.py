@@ -12,12 +12,10 @@ dados_abertos_api = 'https://dadosabertos.capes.gov.br/api/3/action'
 
 
 @functools.lru_cache(maxsize=128)
-def get_all_datasets_with_resources(
-    q: str = 'catalogo-de-teses-e-dissertacoes',
-):
+def get_all_datasets_with_resources():
 
     # Obter todos os conjuntos de dados com recursos
-    response = requests.get(f'{dados_abertos_api}/package_search?q={q}')
+    response = requests.get(f'{dados_abertos_api}/package_search')
     r_json = response.json()
     datasets = r_json['result']['results']
 
