@@ -2,11 +2,11 @@
 
 1. Instale a biblioteca
     ```sh
-    pip install git+https://github.com/AcademicAI/catalogo-teses.git
+    pip install git+https://github.com/AcademicAI/catalogos-capes.git
     ```
 2. Obtendo lista de catálogos
     ```python
-    from catalogo_teses import datasets
+    from catalogos_capes import datasets
 
     # obtém todos os catálogos do portal de dados abertos da CAPES
     df = datasets.get_all_datasets_with_resources() 

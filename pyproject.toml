@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "catalogo-teses"
+name = "catalogos-capes"
 version = "0.1.0"
 description = ""
 authors = ["Jessica Sousa <jessica.sousa.pc@gmail.com>"]
 readme = "README.md"
-packages = [{include = "catalogo_teses"}]
+packages = [{include = "catalogos_capes"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
