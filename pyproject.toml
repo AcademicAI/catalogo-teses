@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "catalogo-teses"
+version = "0.1.0"
+description = ""
+authors = ["Jessica Sousa <jessica.sousa.pc@gmail.com>"]
+readme = "README.md"
+packages = [{include = "catalogo_teses"}]
+
+[tool.poetry.dependencies]
+python = "~3.11"
+requests = "2.31.0"
+pandas = "2.0.3"
+tqdm = "4.65.2"
+tenacity = "8.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
