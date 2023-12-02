@@ -1,6 +1,6 @@
-# Catálogo de Teses
+# Catálogo Capes
 
-Ferramenta para download de catálogos de teses e dissertações da CAPES. 
+Ferramenta para download de catálogos dos dados abertos da CAPES. 
 
 ## Pré-requisitos
 
